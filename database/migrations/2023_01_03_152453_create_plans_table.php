@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('name');
+            $table->string('amount');
+            $table->enum('duration',['montly', 'yearly'])->default('montly');
             $table->timestamps();
         });
     }
